@@ -19,12 +19,10 @@ jobs:
         uses: github/super-linter/slim@v4.9.0
         env:
           VALIDATE_JAVASCRIPT_STANDARD: false
-#          VALIDATE_TERRAFORM_TERRASCAN: false
-#          VALIDATE_GITLEAKS: false
           VALIDATE_HTML: false
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_CSS: false
           VALIDATE_JSCPD: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          FILTER_REGEX_EXCLUDE: ./assets/*, ./error/*, ./images/*
+          FILTER_REGEX_EXCLUDE: ./web/*
