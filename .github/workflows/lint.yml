@@ -1,0 +1,30 @@
+---
+
+name: "Lint Pull Request"
+
+on:
+  pull_request:
+
+jobs:
+  lint:
+    name: "Lint Code Base"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "Run Linters"
+        uses: github/super-linter/slim@v4.9.0
+        env:
+          VALIDATE_JAVASCRIPT_STANDARD: false
+#          VALIDATE_TERRAFORM_TERRASCAN: false
+#          VALIDATE_GITLEAKS: false
+          VALIDATE_HTML: false
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_CSS: false
+          VALIDATE_JSCPD: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          FILTER_REGEX_EXCLUDE: ./assets/*, ./error/*, ./images/*
