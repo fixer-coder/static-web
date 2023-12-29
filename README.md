@@ -6,7 +6,7 @@ This project aims to build all the necessary components for a CI/CD pipeline tha
 
 ## Project Specifications
 
-* The infrastructure should be codified using Terraform and Provisioned so that it can be redeployed to a different account with minor variable changes.
+* The infrastructure should be codified using Terraform and Provisioned so that it can be redeployed to a different account with minor variable changes. Terraform code to deploy this can be found here [Terraform-projects](https://github.com/fixer-coder/Terraform-projects)
 * S3 should be configured as a static site and host the content.
 * Amazon CloudFront should be configured to distribute the content from the S3 static site
 * Amazon CloudFront's default behavior should be configured to not cache
