@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: "Run Linters"
-        uses: github/super-linter/slim@v4.9.0
+        uses: github/super-linter/slim@v5.0.0
         env:
           VALIDATE_JAVASCRIPT_STANDARD: false
 #          VALIDATE_TERRAFORM_TERRASCAN: false
